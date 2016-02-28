@@ -1,0 +1,49 @@
+---
+layout: default
+---
+<div class="post">
+  {% if page.image %}
+    <div class="featuredImage">
+        <img src="{{ '/assets/img/' | prepend: site.baseurl | append: page.image }}" alt="" />
+      </div>
+  {% endif %}
+  <p class="postTitle">{{ page.title }}</p>
+  <p class="cat-tag-post">
+    {{ page.date | date: '%B %d, %Y' }} | <span class="time">{{ page.content | number_of_words | divided_by:180 }}</span> Minute Read <br>
+  		{% if page.tags.size > 0 %}
+            Tags :
+            {% assign sorted_tags = (page.tags | sort)%}
+            {% for tag in sorted_tags %}
+              {% if forloop.last %}
+                <a href="{{ site.baseurl}}/articles/#{{tag}}-header"> {{ tag }} </a>
+              {% else %}
+                <a href="{{ site.baseurl}}/articles/#{{tag}}-header"> {{ tag }}, </a>
+              {% endif %}
+            {% endfor %}
+            |
+   		{% endif %}
+      	{% if page.categories.size > 0 %}
+	        Categories :
+	        {% assign sorted_cats = (page.categories | sort)%}
+	        {% for cat in sorted_cats %}
+	          {% if forloop.last %}
+              <a href="{{ site.baseurl}}/articles/#{{cat}}-header"> {{ cat }} </a>
+            {% else %}
+              <a href="{{ site.baseurl}}/articles/#{{cat}}-header"> {{ cat }}, </a>
+            {% endif %}
+	        {% endfor %}
+      	{% endif %}
+      </p>
+
+  <!-- <p class="meta">{{ page.tags | array_to_sentence_string }} </p> -->
+  
+  {{ content }}
+
+
+
+{% include sharing.html %}
+
+ <!-- Disqus -->
+{% if site.disqus_shortname %} {% include disqus.html %} {% endif %}
+
+</div>

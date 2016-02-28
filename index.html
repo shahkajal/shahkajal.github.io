@@ -1,0 +1,56 @@
+---
+layout: default
+title: Home
+---
+
+<div class="home" id="home">
+ 
+  <ul class="posts noList">
+    {% for post in paginator.posts %}
+      <li>
+        
+        <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+        
+        <div>
+           <p class="cat-tag-index">
+          {{ post.date | date: '%B %d, %Y' }}<br>
+          {% if post.tags.size > 0 %}
+            Tags:
+            {% assign sorted_tags = (post.tags | sort)%}
+            {% for tag in sorted_tags %}
+            {% if forloop.last %}
+             <a href="{{ site.baseurl}}/articles/#{{tag}}-header"> {{ tag }} </a>
+            {% else %}
+              <a href="{{ site.baseurl}}/articles/#{{tag}}-header"> {{ tag }}, </a>
+            {% endif %}
+            {% endfor %}
+            |
+          {% endif %}
+          
+          {% if post.categories.size > 0 %}
+            Categories :
+            {% assign sorted_cats = (post.categories | sort)%}
+            {% for cat in sorted_cats %}
+            {% if forloop.last %}
+              <a href="{{ site.baseurl}}/articles/#{{cat}}-header"> {{ cat }} </a>
+            {% else %}
+              <a href="{{ site.baseurl}}/articles/#{{cat}}-header"> {{ cat }}, </a>
+            {% endif %}
+            {% endfor %}
+          {% endif %}
+        </p>
+        </div>
+        <p class="description">{{ post.excerpt | strip_html | strip_newlines | truncate: 250 }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+  <!-- Pagination links -->
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous button__outline">Newer Posts</a> 
+    {% endif %}
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next button__outline">Older Posts</a>
+    {% endif %}
+  </div>
+</div>

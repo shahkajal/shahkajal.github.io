@@ -1,0 +1,33 @@
+title: Organization of Commerce
+description: A blog about Commerce.
+
+url: http://shahkajal.github.io
+baseurl: ""
+paginate_path: "blog/page:num/"
+permalink: blog/:title/
+
+markdown: redcarpet
+highlighter: rouge
+gems: [jekyll-paginate]
+paginate: 5
+
+disqus_shortname : "kajal's blog"
+avatar : /assets/img/avatar.jpg
+navigation:
+ - title: Home
+   url: /index.html
+ - title: About
+   url: /about
+ - title: Articles
+   url: /articles
+ - title: Categories
+   url: /categories
+ - title: Tags
+   url: /tags
+
+social:
+   twitter: kj1694
+   facebook: kajal.shahr94
+   email: kajalrshah94@gmail.com
+
+google_analytics: "UA-58263416-1"

@@ -1,0 +1,33 @@
+/***************
+COLOR VARIABLES
+***************/
+
+// Better default colors
+// Cool
+
+// Color variables
+$primary-color: teal;
+
+$font-color: #303030;
+$link-color: $primary-color;
+$background-color: white;
+$body-color :	white;
+$subtle-color: $grey; // Subtle color for subtle text
+$header-color : $font-color;
+
+/***************
+CONSISTENT SETTINGS
+***************/
+
+$br: 5px; // Border-radius
+$btn-br: 5px; // Button border-radius
+$padding: 40px; // Padding and margins
+$line-height: 44px; // Consistent height for buttons, inputs etc.
+
+
+/***************
+TYPE SETTINGS
+***************/
+
+$sans-serif: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+$serif:  "Palatino Linotype", "Book Antiqua", Palatino, serif;
