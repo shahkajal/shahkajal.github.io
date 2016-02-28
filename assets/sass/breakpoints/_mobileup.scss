@@ -64,6 +64,7 @@ MENU STYLING
 
 .nav-collapse {
 	z-index: 1;
+	
 	ul {
 	  margin: 0;
 	  padding: 0;
@@ -160,13 +161,8 @@ PAGE STYLES
 ***************/
 
 .pageTitle {
-	margin: auto 1em;
-	margin-bottom: 1em;
-	margin-top: 1em;
+	margin: 2rem auto 1em;
 	text-align: center;
-	font-weight : bold;
-	font-size : 2.5em;
-
 }
 
 .content {
@@ -181,19 +177,15 @@ HEADER STYLING
 .header {
 	.site-title{
 		text-align : center;
-		font-size : 2em;
+		font-size: 1em;
+		line-height: 3em;
+		font-family: $sans-serif;
 		a{
 		color: $header-color;
 		}
 	}
-	border-bottom : 1px solid $font-color ;
-	padding: 0;
-	height: 4em;
-	.container {
-		padding: 0;
-		@include container(100%);
-	}
 
+	border-bottom : 1px solid $font-color ;
 }
 
 
@@ -204,12 +196,11 @@ POST STYLING
 .post {
 
 	.postTitle {
-		margin-top: 2em;
-		margin-bottom: 0em;
 		text-align: center;
-		font-weight : bold;
-		font-size : 2.5em;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
 	}
+
 
 	blockquote {
 		clear: both;
