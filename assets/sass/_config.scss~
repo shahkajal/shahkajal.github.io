@@ -23,8 +23,7 @@ $black:  #111;
 
 // Color variables
 $primary-color: teal;
-$secondary-color: teal;
-$tertiary-color: #aaa;
+
 $font-color: #303030;
 $link-color: $primary-color;
 $background-color: white;
