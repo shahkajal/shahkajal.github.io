@@ -175,17 +175,16 @@ HEADER STYLING
 ***************/
 
 .header {
-	.site-title{
+
 		text-align : center;
 		font-size: 1em;
 		line-height: 3em;
 		font-family: $sans-serif;
+		border-bottom : 1px solid $font-color ;
 		a{
 		color: $header-color;
 		}
-	}
-
-	border-bottom : 1px solid $font-color ;
+	
 }
 
 
