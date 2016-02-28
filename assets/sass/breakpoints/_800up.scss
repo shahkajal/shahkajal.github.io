@@ -50,6 +50,12 @@ HEADER STYLING
 
 .header {
 	height: 8em;
+	text-align :center;
+	a {
+		font-size :2em;
+		
+		color :$font-color;
+	}
 	position: relative;
 	padding-bottom: 2em;
 	nav {
